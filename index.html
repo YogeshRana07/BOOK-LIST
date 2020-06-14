@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <title>trillo &mdash; BOOK Poject</title>
+
+    <!-- <style>
+        .container{
+            width:50%;
+            margin:auto;
+        }
+        #Book-form div{
+            margin:10px;
+        }
+        #Book-form div input[type="text"],#Book-form div input[type="submit"]{
+            width:100%;
+            margin-top: 10px;
+            height: 1.7em;
+            font-size: 0.8em;
+        }
+        #Book-form div input[type="submit"]{
+            height:1.7em;
+            font-size: 1.3em;
+            text-transform: uppercase;
+        }
+
+        #Book-form div label{
+            /* margin:30px 0; */
+        }
+        table{
+            margin-top: 30px;
+            width:100%;
+            border: 1px solid black;
+        }
+        tr{
+            text-align: center;
+        }
+        .form-search{
+            /* margin-left:40px; */
+            margin-top: 20px;
+            display:flex;
+            justify-content: center;
+
+            /* align-items: center; */
+        }
+        .form-search select{
+            text-transform: uppercase;
+        }
+        .error,.success{
+            color:white;
+            font-size: 1.2em;
+            padding:16px 40px;
+        }
+        .error{
+            background-color: red;
+        }
+        .success{
+            background-color: green;
+        } -->
+    <!-- </style> -->
+</head>
+<body>
+    <div class="container">
+      <div class="heading">
+        <h1 class="book">ADD A BOOK</h1></div>
+      <div class="Box">
+      <div class="form">
+        <form id="Book-form">
+            <div class="title Book-form--title">
+                <label for="title" class="lbl">Title</label>
+                <br>
+                <input type="text" class="input" id="title" name="title" placeholder="Enter the title of the book">
+            </div>
+            <div class="author Book-form--author">
+                <label for="Author" class="lbl">Author</label>
+                <br>
+                <input type="text" class="input" id="Author" name="author" placeholder="enter the author of book">
+            </div>
+            <div class="isbn Book-form--isbn">
+                <label for="ISBN" class="lbl">ISBN</label>
+                <br>
+                <input type="text" id="ISBN" class="input" name="isbn" placeholder="enter  the ISBN number of book">
+            </div>
+            <div class="submit Book-form--submit">
+                <input type="submit" value="submit" class="btn btn--white btn--animated">
+            </div>
+        </form>
+      </div>
+
+
+      <div class="output">
+        <div class="option">
+          <form class="form-search">
+              <select class="select">
+                  <option value="title">title</option>
+                  <option value="author">author</option>
+                  <option value="ISBN">ISBN</option>
+              </select>
+              <input type="search" class="input" placeholder="enter your choice" name="search" id="search">
+          </form>
+        </div>
+
+        <div class="table">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Title</th>
+                      <th>Author</th>
+                      <th>ISBN</th>
+                      <th>Delete</th>
+                  </tr>
+              </thead>
+              <tbody class="Book-list">
+
+              </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <script src="App.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+    overflow-x: hidden !important;
+    min-height: 60rem;
+
+    }
+
+    .Box{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex:1 0 50%;
+
+      // margin:10rem auto
+    }
+    .form{
+      display: flex;
+      flex:0 0 40%;
+      border-right:1px solid var(--color-primary-dark);
+      justify-content: center;
+
+      @media only screen and (max-width: $bp-large) {
+            margin-right: 10rem;
+        }
+
+      }
+
+
+    .output{
+      display: flex;
+      align-items: center;
+      margin-right: 30rem;
+      flex-direction: column;
+      // transform: translate(-50%,-50%);
+      @media only screen and (max-width: $bp-largest) {
+            margin-right:10rem;
+
+        }
+          @media only screen and (max-width: $bp-small) {
+
+          align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+      }
+        @media only screen and (max-width: $bp-large) {
+            margin-right: 10rem;
+            display: flex;
+            justify-content:flex-start;
+
+    }
+  }
