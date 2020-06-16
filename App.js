@@ -6,14 +6,15 @@ function Book(title,author,isbn){
 function UI(){}
 UI.prototype.showAlert=function(message,className1){
     const div=document.createElement('div');
-    div.className=`alert ${className1}`;
+    div.className=  `alert ${className1}`;
+  
     div.appendChild(document.createTextNode(message));
     const form=document.querySelector(".container");
-    const bookForm=document.querySelector('#Book-form');
+    const bookForm=document.querySelector('.heading');
     form.insertBefore(div,bookForm);
     setTimeout(function(){
         document.querySelector('.alert').remove();
-    },3000);
+    },2000);
 }
 //add book to table
 UI.prototype.addBook=(book)=>{
@@ -31,7 +32,7 @@ UI.prototype.deleteBook=function(e){
     console.log(e.target.parentElement.classList);
     if(e.target.parentElement.classList.contains('delete')){
         e.target.parentElement.parentElement.parentElement.remove();
-        this.showAlert('book deleted successfully','success');
+        this.showAlert('Book Deleted Successfully','success');
     }
 }
 //clear all the fields
@@ -51,10 +52,10 @@ document.querySelector("#Book-form").addEventListener('submit',(e)=>{
     console.log(author.value);
     if(title.value===""||author.value === ""||ISBn.value===""){
         // console.log("i am working");
-       ui.showAlert('please fill  all the the field',"error")
+       ui.showAlert('Please fill  all the the field',"error")
     }
     else{
-        ui.showAlert("book added succesfully","success");
+        ui.showAlert("Book Added Succesfully","success");
         var book1=new Book(title.value,author.value,ISBn.value);
         ui.addBook(book1);
         ui.clearField(title,author,ISBn);
